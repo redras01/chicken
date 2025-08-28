@@ -55,16 +55,16 @@
 
         .timer-display.work {
             border-color: #3373b0;
-            background: rgba(76, 175, 80, 0.2);
+            background: rgba(0,136,137);
         }
 
         .timer-display.rest {
             border-color: #2196F3;
-            background: rgba(33, 150, 243, 0.2);
+            background: rgba(253,221,160);
         }
 
         .timer-display.warning {
-            border-color: #ff4444;
+            border-color: #3373b0;
             background: rgba(255, 68, 68, 0.2);
             animation: pulse 1s infinite;
         }
@@ -119,23 +119,28 @@
         }
 
         .button {
-            width: 100%;
-            padding: 18px;
-            font-size: 1.3rem;
+            width: 80px;
+            height: 80px;
+            padding: 0;
+            font-size: 2rem;
             font-weight: bold;
             border: none;
-            border-radius: 12px;
+            border-radius: 50px;
             cursor: pointer;
             transition: all 0.3s ease;
-            margin: 10px 0;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            margin: 20px auto;
+            text-transform: none;
+            letter-spacing: 0px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
 
         .button.primary {
-            background: #4CAF50;
-            color: white;
-            box-shadow: 0 4px 15px rgba(76, 175, 80, 0.4);
+            background: #fddda0;
+            color: rgb(219,154,89);
+            box-shadow: 0 4px 15px rgba(175, 155, 76, 0.4);
         }
 
         .button.primary:active {
@@ -144,9 +149,9 @@
         }
 
         .button.stop {
-            background: #f44336;
-            color: white;
-            box-shadow: 0 4px 15px rgba(244, 67, 54, 0.4);
+            background: #3373b0;
+            color:  #bae1ff;
+            box-shadow: 0 4px 15px rgba(64, 62, 93, 0.4);
         }
 
         .button.stop:active {
@@ -214,7 +219,9 @@
                 <div id="summaryText"></div>
             </div>
             
-            <button class="button primary" onclick="startWorkout()">Start Workout</button>
+            <button class="button primary" onclick="startWorkout()">
+             <img src="lungs.png" width="32" height="32" alt="lungs">
+            </button>
         </div>
         
         <!-- Timer Display -->
