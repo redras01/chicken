@@ -196,12 +196,12 @@
 </head>
 <body>
     <div class="container">
-        <h1 class="title">Learning to Breathe v1</h1>
+        <h1 class="title">Breathe v1</h1>
         
         <!-- Setup Form -->
         <div id="setupForm" class="setup-form">
             <div class="input-group">
-                <label for="workTime">🔥 Work Time (seconds)</label>
+                <label for="workTime">🔥 Max C02 Time (seconds)</label>
                 <input type="number" id="workTime" value="180" min="1" max="3600">
             </div>
             
@@ -220,8 +220,8 @@
             </div>
             
             <button class="button primary" onclick="startWorkout()">
-             <img src="lungs.png" width="32" height="32" alt="lungs">
-            </button>
+             <img src="Resources/lungs.png" width="78" height="78" alt="lungs">
+            </button> 
         </div>
         
         <!-- Timer Display -->
@@ -235,7 +235,8 @@
         <!-- Completion Screen -->
         <div id="completionScreen" class="hidden">
             <div class="timer-display" style="font-size: 2rem;">
-                🎉 WORKOUT COMPLETE! 🎉<br>
+                🎉 BREATH WORK COMPLETE... 
+                <br>or is it!</br>
                 <div style="font-size: 1.2rem; margin-top: 10px;">Great job! 💪</div>
             </div>
             <button class="button primary" onclick="resetWorkout()">New Workout</button>
@@ -272,8 +273,8 @@
             const remainingSeconds = totalSeconds % 60;
             
             summaryText.innerHTML = `
-                <strong>Total Workout:</strong> ${totalMinutes}m ${remainingSeconds}s<br>
-                <strong>Each Round:</strong> ${formatTime(work)} work + ${formatTime(rest)} rest
+                <strong>Total Time:</strong> ${totalMinutes}m ${remainingSeconds}s<br>
+
             `;
         }
         
